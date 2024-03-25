@@ -1,3 +1,98 @@
+:root {
+    --color-backround: #1F2937;
+    --grey-color: #2F3E53;
+}
+
 body {
     margin: 0;
+    background: var(--color-backround);
+    text-align: center;
+    margin-top: 20%;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    font-variation-settings:
+      "slnt" 0;
+
 }
+
+.main {
+    border-bottom: 1px solid var(--grey-color)
+}
+
+#mainheading {
+  font-family: "Karla", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600px;
+  font-style: normal;
+  margin-bottom: 5%;
+}
+
+#btn {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400px;
+  font-style: normal;
+  font-variation-settings:
+    "slnt" 0;
+
+    margin-bottom: 11%;
+    margin-top: 7%;
+    background-color: #10B981;
+    color: whitesmoke;
+    box-shadow: 0px 1px 2px 0px #0000000D;
+    top: 284px;
+    left: 52px;
+    padding: 9px 17px 9px 15px;
+    gap: 12px;
+    border-radius: 6px 0px 0px 0px;
+    opacity: 0px;
+
+
+
+}
+
+.rectangle {
+    margin-top: 10px;
+    width: 211px;
+    height: 39px;
+    top: 396px;
+    left: 287px;
+    gap: 0px;
+    border-radius: 6px 0px 0px 0px;
+    opacity: 0px;
+    background: var(--grey-color);
+
+    font-family: initial;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 32px;
+    text-align: center;
+
+}
+
+#flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.copyText {
+    color: #55F991;
+
+}
+
+.whiteText {
+    color: white;
+}
+
+.greenText {
+    color: #55F991;
+}
+
+h3 {
+    color: #D5D4D8;
+
+}
+/*https://www.figma.com/file/NEj9JDycMjF3XKXq7swoc9/Random-Password-Generator-(New-version)?type=design&node-id=0-1&mode=design&t=2LY2jBrfmTqoBeLs-0*/
