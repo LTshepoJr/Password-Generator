@@ -7,7 +7,6 @@ body {
     margin: 0;
     background: var(--color-backround);
     text-align: center;
-    margin-top: 20%;
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400px;
@@ -18,15 +17,17 @@ body {
 }
 
 .main {
-    border-bottom: 1px solid var(--grey-color)
+    border-bottom: 1px solid var(--grey-color);
+    min-height: 100dvb;
 }
 
 #mainheading {
   font-family: "Karla", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600px;
+  font-weight: 600;
   font-style: normal;
-  margin-bottom: 5%;
+  font-size: 3em;
+
 }
 
 #btn {
@@ -37,8 +38,8 @@ body {
   font-variation-settings:
     "slnt" 0;
 
-    margin-bottom: 11%;
-    margin-top: 7%;
+
+
     background-color: #10B981;
     color: whitesmoke;
     box-shadow: 0px 1px 2px 0px #0000000D;
@@ -54,7 +55,6 @@ body {
 }
 
 .rectangle {
-    margin-top: 10px;
     width: 211px;
     height: 39px;
     top: 396px;
