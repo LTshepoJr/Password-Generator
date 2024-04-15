@@ -35,7 +35,7 @@ function checkboxChanged() {
 }
 
 
-const button = document.getElementById("btn")
+const button = document.getElementById("gtnBtn")
 const box1 = document.getElementById("firstBox")
 const box2 = document.getElementById("secondBox")
 let number = document.getElementById("numberInput")
