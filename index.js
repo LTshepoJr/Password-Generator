@@ -104,8 +104,8 @@ function numCharacters() {
         box2.innerHTML = `<p>${randomCharaters()}</p>`
     }
     else {
-        box1.innerHTML = `<p>Please enter a number between 8 and 15</p>`
-        box2.innerHTML = `<p>Please enter a number between 8 and 15</p>`
+        box1.innerHTML = `<p>＞﹏＜</p>`
+        box2.innerHTML = `<p>＞﹏＜</p>`
         alert('Please enter a number between 8 and 15');
     }
 }
