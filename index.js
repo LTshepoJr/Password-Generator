@@ -68,37 +68,45 @@ submitValue.addEventListener("click", function(event) {
 })
 
 function numCharacters() {
-    if (number === 8) {
+    const input = number;
+    const inputValue = parseInt(input.value);
+
+    if (inputValue === 8) {
         box1.innerHTML = `<p>${randomCharaters()}</p>`
         box2.innerHTML = `<p>${randomCharaters()}</p>`
     } 
-    else if (number === 9) {
+    else if (inputValue === 9) {
         box1.innerHTML = `<p>${randomCharaters()}</p>`
         box2.innerHTML = `<p>${randomCharaters()}</p>`
     }
-    else if (number === 10) {
+    else if (inputValue === 10) {
         box1.innerHTML = `<p>${randomCharaters()}</p>`
         box2.innerHTML = `<p>${randomCharaters()}</p>`
     }
-    else if (number === 11) {
+    else if (inputValue === 11) {
         box1.innerHTML = `<p>${randomCharaters()}</p>`
         box2.innerHTML = `<p>${randomCharaters()}</p>`
     }
-    else if (number === 12) {
+    else if (inputValue === 12) {
         box1.innerHTML = `<p>${randomCharaters()}</p>`
         box2.innerHTML = `<p>${randomCharaters()}</p>`
     }
-    else if (number === 13) {
+    else if (inputValue === 13) {
         box1.innerHTML = `<p>${randomCharaters()}</p>`
         box2.innerHTML = `<p>${randomCharaters()}</p>`
     }
-    else if (number === 14) {
+    else if (inputValue === 14) {
+        box1.innerHTML = `<p>${randomCharaters()}</p>`
+        box2.innerHTML = `<p>${randomCharaters()}</p>`
+    }
+    else if (inputValue === 15) {
         box1.innerHTML = `<p>${randomCharaters()}</p>`
         box2.innerHTML = `<p>${randomCharaters()}</p>`
     }
     else {
-        box1.innerHTML = `<p>${randomCharaters()}</p>`
-        box2.innerHTML = `<p>${randomCharaters()}</p>`
+        box1.innerHTML = `<p>Please enter a number between 8 and 15</p>`
+        box2.innerHTML = `<p>Please enter a number between 8 and 15</p>`
+        alert('Please enter a number between 8 and 15');
     }
 }
 

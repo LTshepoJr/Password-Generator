@@ -1,10 +1,10 @@
 body {
-    margin: 0 auto;
-    width: 50%;
     background-color: var(--bkgrd-color);
     font-family: "Inter", sans-serif;
     text-align: center;
     padding: 0;
+    margin: 0;
+    font-size: var(--txt-size-bd);
 }
 
 :root {
@@ -15,6 +15,7 @@ body {
     --bdr-color: #D5D4D8;
     --hd-size: 40px;
     --txt-size: 20px;
+    --txt-size-bd: 17px;
     --rfsh-btn-color: #910404;
 }
 
@@ -30,6 +31,7 @@ body {
     font-size: var(--hd-size);
     line-height: var(--hd-size);
     letter-spacing: -0.05em;
+    margin: 3em 0px 0px 0px;
 }
 
 .baseHeadings {
@@ -46,8 +48,9 @@ body {
     color: var(--bkgrd-color);
     font-size: var(--txt-size);
     border: 2px solid var(--bdr-color);
-    margin: 1.3em 0;
+    margin: 10px 0;
     cursor: pointer;
+    transition: all 0.5s ease-in-out;
 }
 
 .btn:hover {
@@ -66,7 +69,7 @@ body {
 }
 
 #flexBox {
-    margin: 1.3em;
+    margin: 10px 0px 0px 0px;
     display: flex;
     justify-content: center;
 }
@@ -75,13 +78,13 @@ body {
     background: var(--gry-color);
     color: var(--lght-grn-color);
     width: 211px;
-    height: 39px;
+    height: 50px;
     top: 396px;
     left: 52px;
     border-radius: 6px;
     text-align: center;
-    margin: 0 20px;
-
+    margin: 0 10px;
+    padding: 10px 15px;
 }
 
 #numberInput {
@@ -90,6 +93,7 @@ body {
     padding: 0 10px;
     font-size: var(--txt-size);
     border-radius: 6px;
+    text-align: center;
 }
 
 #result {
@@ -105,8 +109,5 @@ body {
 input[type="checkbox"] {
     cursor: pointer;
     padding: 2em;
-}
-label {
-    
 }
 /*https://www.figma.com/file/NEj9JDycMjF3XKXq7swoc9/Random-Password-Generator-(New-version)?type=design&node-id=0-1&mode=design&t=2LY2jBrfmTqoBeLs-0*/
