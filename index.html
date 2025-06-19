@@ -39,7 +39,7 @@
     <title>Password Generator</title>
   </head>
   <body>
-    <div class="main">
+    <div>
       <h1 id="mainHeading">
         <span>Generate a</span><span id="greenText">Random Password</span>
       </h1>
@@ -55,26 +55,12 @@
         />
       </label>
       <h3 class="baseHeadings">Choose one or both to include:</h3>
-      <label for="numberCheck" class="label">
-        <!-- checkbox.value=numbers, checkbox.checked=boolean -->
-        <input
-          class="label"
-          type="checkbox"
-          name="numbers"
-          value="numbers"
-          id="numberCheck"
-        />
+      <label for="numbersCheck" class="label">
+        <input class="label" type="checkbox" name="numbers" id="numbersCheck" />
         Numbers
       </label>
-      <!-- checkbox.value=symbols, checkbox.checked=boolean -->
       <label for="symbolsCheck" class="label">
-        <input
-          class="label"
-          type="checkbox"
-          name="symbols"
-          value="symbols"
-          id="symbolsCheck"
-        />
+        <input class="label" type="checkbox" name="symbols" id="symbolsCheck" />
         Symbols
       </label>
       <div id="result"></div>
@@ -85,8 +71,8 @@
     </div>
     <p>Click to copy text after generating password.</p>
     <div id="flexBox">
-      <div id="firstBox" class="boxes"></div>
-      <div id="secondBox" class="boxes"></div>
+      <p id="randomPassword1" class="boxes"></p>
+      <p id="randomPassword2" class="boxes"></p>
     </div>
     <script src="index.js"></script>
   </body>
