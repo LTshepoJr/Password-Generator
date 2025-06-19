@@ -1,113 +1,111 @@
 body {
-    background-color: var(--bkgrd-color);
-    font-family: "Inter", sans-serif;
-    text-align: center;
-    padding: 0;
-    margin: 0;
-    font-size: var(--txt-size-bd);
+  background-color: var(--bkgrd-color);
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-size: var(--txt-size-bd);
 }
 
 :root {
-    --gry-color: #273549;
-    --lght-grn-color: #10B981;
-    --lght-gry-color: #6B7280;
-    --bkgrd-color: #ECFDF5;
-    --bdr-color: #D5D4D8;
-    --hd-size: 40px;
-    --txt-size: 20px;
-    --txt-size-bd: 17px;
-    --rfsh-btn-color: #910404;
+  --gry-color: #273549;
+  --lght-grn-color: #10b981;
+  --lght-gry-color: #6b7280;
+  --bkgrd-color: #ecfdf5;
+  --bdr-color: #d5d4d8;
+  --hd-size: 40px;
+  --txt-size: 20px;
+  --txt-size-bd: 17px;
+  --rfshbutton-color: #910404;
 }
 
-.greenText {
-    display: block;
-    color: var(--lght-grn-color);
+#greenText {
+  display: block;
+  color: var(--lght-grn-color);
 }
 
-#mainheading {
-    color: var(--gry-color);
-    font-family: "Karla", sans-serif;
-    font-weight: 800;
-    font-size: var(--hd-size);
-    line-height: var(--hd-size);
-    letter-spacing: -0.05em;
-    margin: 3em 0px 0px 0px;
+#mainHeading {
+  color: var(--gry-color);
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+  font-size: var(--hd-size);
+  line-height: var(--hd-size);
+  letter-spacing: -0.05em;
+  margin: 3em 0px 0px 0px;
 }
 
 .baseHeadings {
-    font-size: var(--txt-size);
-    font-weight: 400;
-    line-height: 28px;
-
+  font-size: var(--txt-size);
+  font-weight: 400;
+  line-height: 28px;
 }
 
-.btn {
-    padding: 15px 20px;
-    border-radius: 6px;
-    background-color: var(--lght-grn-color);
-    color: var(--bkgrd-color);
-    font-size: var(--txt-size);
-    border: 2px solid var(--bdr-color);
-    margin: 10px 0;
-    cursor: pointer;
-    transition: all 0.5s ease-in-out;
+button {
+  padding: 15px 20px;
+  border-radius: 6px;
+  background-color: var(--lght-grn-color);
+  color: var(--bkgrd-color);
+  font-size: var(--txt-size);
+  border: 2px solid var(--bdr-color);
+  margin: 10px 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.btn:hover {
-    background-color: var(--bkgrd-color);
-    color: var(--lght-grn-color);
-    border: 2px solid var(--lght-grn-color);
+button:hover {
+  background-color: var(--bkgrd-color);
+  color: var(--lght-grn-color);
+  border: 2px solid var(--lght-grn-color);
 }
 
 #refreshButton:hover {
-    color: var(--rfsh-btn-color);
-    border: 2px solid var(--rfsh-btn-color);
+  color: var(--rfshbutton-color);
+  border: 2px solid var(--rfshbutton-color);
 }
 
 .buttons {
-    border-bottom: 1px solid var(--bdr-color);
+  border-bottom: 1px solid var(--bdr-color);
 }
 
 #flexBox {
-    margin: 10px 0px 0px 0px;
-    display: flex;
-    justify-content: center;
+  margin: 10px 0px 0px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .boxes {
-    background: var(--gry-color);
-    color: var(--lght-grn-color);
-    width: 211px;
-    height: 50px;
-    top: 396px;
-    left: 52px;
-    border-radius: 6px;
-    text-align: center;
-    margin: 0 10px;
-    padding: 10px 15px;
+  background: var(--gry-color);
+  color: var(--lght-grn-color);
+  width: 211px;
+  height: 50px;
+  top: 396px;
+  left: 52px;
+  border-radius: 6px;
+  text-align: center;
+  margin: 0 10px;
+  padding: 10px 15px;
 }
 
 #numberInput {
-    color: var(--lght-grn-color);
-    background-color: var(--gry-color);
-    padding: 0 10px;
-    font-size: var(--txt-size);
-    border-radius: 6px;
-    text-align: center;
+  color: var(--lght-grn-color);
+  background-color: var(--gry-color);
+  padding: 0 10px;
+  font-size: var(--txt-size);
+  border-radius: 6px;
+  text-align: center;
 }
 
 #result {
-    color: #910404;
-    font-size: var(--txt-size);
-    font-weight: 500;
+  color: #910404;
+  font-size: var(--txt-size);
+  font-weight: 500;
 }
 
 .label {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 input[type="checkbox"] {
-    cursor: pointer;
-    padding: 2em;
+  cursor: pointer;
+  padding: 2em;
 }
-/*https://www.figma.com/file/NEj9JDycMjF3XKXq7swoc9/Random-Password-Generator-(New-version)?type=design&node-id=0-1&mode=design&t=2LY2jBrfmTqoBeLs-0*/
