@@ -1,37 +1,36 @@
 body {
-  background-color: var(--bkgrd-color);
-  font-family: "Inter", sans-serif;
-  text-align: center;
   padding: 0;
   margin: 0;
-  font-size: var(--txt-size-bd);
+  background-color: var(--background-color);
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  font-size: var(--body-text-size);
 }
 
 :root {
   --gry-color: #273549;
-  --lght-grn-color: #10b981;
-  --lght-gry-color: #6b7280;
-  --bkgrd-color: #ecfdf5;
-  --bdr-color: #d5d4d8;
-  --hd-size: 40px;
+  --light-grn-color: #10b981;
+  --light-gry-color: #6b7280;
+  --background-color: #ecfdf5;
+  --border-color: #d5d4d8;
+  --heading-size: 40px;
   --txt-size: 20px;
-  --txt-size-bd: 17px;
-  --rfshbutton-color: #910404;
+  --body-text-size: 17px;
+  --refresh-button-color: #910404;
 }
 
 #greenText {
   display: block;
-  color: var(--lght-grn-color);
+  color: var(--light-grn-color);
 }
 
 #mainHeading {
   color: var(--gry-color);
   font-family: "Karla", sans-serif;
   font-weight: 800;
-  font-size: var(--hd-size);
-  line-height: var(--hd-size);
+  font-size: var(--heading-size);
+  line-height: var(--heading-size);
   letter-spacing: -0.05em;
-  margin: 3em 0px 0px 0px;
 }
 
 .baseHeadings {
@@ -43,51 +42,47 @@ body {
 button {
   padding: 15px 20px;
   border-radius: 6px;
-  background-color: var(--lght-grn-color);
-  color: var(--bkgrd-color);
+  background-color: var(--light-grn-color);
+  color: var(--background-color);
   font-size: var(--txt-size);
-  border: 2px solid var(--bdr-color);
+  border: 2px solid var(--border-color);
   margin: 10px 0;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 button:hover {
-  background-color: var(--bkgrd-color);
-  color: var(--lght-grn-color);
-  border: 2px solid var(--lght-grn-color);
+  background-color: var(--background-color);
+  color: var(--light-grn-color);
+  border: 2px solid var(--light-grn-color);
 }
 
 #refreshButton:hover {
-  color: var(--rfshbutton-color);
-  border: 2px solid var(--rfshbutton-color);
+  color: var(--refresh-button-color);
+  border: 2px solid var(--refresh-button-color);
 }
 
 .buttons {
-  border-bottom: 1px solid var(--bdr-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 #flexBox {
-  margin: 10px 0px 0px 0px;
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
 
 .boxes {
-  background: var(--gry-color);
-  color: var(--lght-grn-color);
-  width: 211px;
-  height: 50px;
-  top: 396px;
-  left: 52px;
+  cursor: pointer;
   border-radius: 6px;
-  text-align: center;
-  margin: 0 10px;
-  padding: 10px 15px;
+  color: var(--light-grn-color);
+  margin: 0 0.5em;
+  padding: 1em 1.4em;
+  background-color: var(--gry-color);
 }
 
 #numberInput {
-  color: var(--lght-grn-color);
+  color: var(--light-grn-color);
   background-color: var(--gry-color);
   padding: 0 10px;
   font-size: var(--txt-size);
@@ -96,16 +91,11 @@ button:hover {
 }
 
 #result {
-  color: #910404;
+  color: var(--refresh-button-color);
   font-size: var(--txt-size);
   font-weight: 500;
 }
 
 .label {
   cursor: pointer;
-}
-
-input[type="checkbox"] {
-  cursor: pointer;
-  padding: 2em;
 }
