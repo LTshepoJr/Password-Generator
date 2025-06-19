@@ -85,8 +85,8 @@ const symbols = [
   "/",
 ];
 
-let selectedOption1 = document.getElementById("numberCheck");
-let selectedOption2 = document.getElementById("symbolsCheck");
+const selectedOption1 = document.getElementById("numbersCheck");
+const selectedOption2 = document.getElementById("symbolsCheck");
 
 selectedOption1.addEventListener("change", checkboxChanged);
 selectedOption2.addEventListener("change", checkboxChanged);
@@ -118,10 +118,9 @@ function checkboxChanged() {
 }
 
 const button = document.getElementById("generateButton");
-const box1 = document.getElementById("firstBox");
-const box2 = document.getElementById("secondBox");
-let number = document.getElementById("numberInput");
-const submitValue = document.getElementById("myForm");
+const randomPassword1 = document.getElementById("randomPassword1");
+const randomPassword2 = document.getElementById("randomPassword2");
+const number = document.getElementById("numberInput");
 
 button.addEventListener("click", function () {
   if (selectedOption1.checked || selectedOption2.checked) {
@@ -135,7 +134,7 @@ function getRandomCharacter() {
   return characters[randomChar];
 }
 
-function randomCharaters() {
+function randomCharacters() {
   let randomPassword = "";
   for (let i = 0; i < number.value; i++) {
     randomPassword += getRandomCharacter();
@@ -143,46 +142,42 @@ function randomCharaters() {
   return randomPassword;
 }
 
-submitValue.addEventListener("click", function (event) {
-  event.preventDefault();
-});
-
 function numCharacters() {
   const input = number;
   const inputValue = parseInt(input.value);
 
   if (inputValue === 8) {
-    box1.innerHTML = `<p>${randomCharaters()}</p>`;
-    box2.innerHTML = `<p>${randomCharaters()}</p>`;
+    randomPassword1.textContent = `${randomCharacters()}`;
+    randomPassword2.textContent = `${randomCharacters()}`;
   } else if (inputValue === 9) {
-    box1.innerHTML = `<p>${randomCharaters()}</p>`;
-    box2.innerHTML = `<p>${randomCharaters()}</p>`;
+    randomPassword1.textContent = `${randomCharacters()}`;
+    randomPassword2.textContent = `${randomCharacters()}`;
   } else if (inputValue === 10) {
-    box1.innerHTML = `<p>${randomCharaters()}</p>`;
-    box2.innerHTML = `<p>${randomCharaters()}</p>`;
+    randomPassword1.textContent = `${randomCharacters()}`;
+    randomPassword2.textContent = `${randomCharacters()}`;
   } else if (inputValue === 11) {
-    box1.innerHTML = `<p>${randomCharaters()}</p>`;
-    box2.innerHTML = `<p>${randomCharaters()}</p>`;
+    randomPassword1.textContent = `${randomCharacters()}`;
+    randomPassword2.textContent = `${randomCharacters()}`;
   } else if (inputValue === 12) {
-    box1.innerHTML = `<p>${randomCharaters()}</p>`;
-    box2.innerHTML = `<p>${randomCharaters()}</p>`;
+    randomPassword1.textContent = `${randomCharacters()}`;
+    randomPassword2.textContent = `${randomCharacters()}`;
   } else if (inputValue === 13) {
-    box1.innerHTML = `<p>${randomCharaters()}</p>`;
-    box2.innerHTML = `<p>${randomCharaters()}</p>`;
+    randomPassword1.textContent = `${randomCharacters()}`;
+    randomPassword2.textContent = `${randomCharacters()}`;
   } else if (inputValue === 14) {
-    box1.innerHTML = `<p>${randomCharaters()}</p>`;
-    box2.innerHTML = `<p>${randomCharaters()}</p>`;
+    randomPassword1.textContent = `${randomCharacters()}`;
+    randomPassword2.textContent = `${randomCharacters()}`;
   } else if (inputValue === 15) {
-    box1.innerHTML = `<p>${randomCharaters()}</p>`;
-    box2.innerHTML = `<p>${randomCharaters()}</p>`;
+    randomPassword1.textContent = `${randomCharacters()}`;
+    randomPassword2.textContent = `${randomCharacters()}`;
   } else {
-    box1.innerHTML = `<p>＞﹏＜</p>`;
-    box2.innerHTML = `<p>＞﹏＜</p>`;
+    randomPassword1.textContent = `＞﹏＜`;
+    randomPassword2.textContent = `＞﹏＜`;
     alert("Please enter a number between 8 and 15");
   }
 }
 
-box1.addEventListener("click", function () {
+randomPassword1.addEventListener("click", function () {
   let textCopy = this.textContent;
   let tempTextArea = document.createElement("textarea");
   tempTextArea.value = textCopy;
@@ -192,7 +187,7 @@ box1.addEventListener("click", function () {
   document.body.removeChild(tempTextArea);
   alert("Text copied to clipboard: " + textCopy);
 });
-box2.addEventListener("click", function () {
+randomPassword2.addEventListener("click", function () {
   let textCopy = this.textContent;
   let tempTextArea = document.createElement("textarea");
   tempTextArea.value = textCopy;
@@ -203,8 +198,8 @@ box2.addEventListener("click", function () {
   alert("Text copied to clipboard: " + textCopy);
 });
 
-var refreshButton = document.getElementById("refreshButton");
+const refreshButton = document.getElementById("refreshButton");
 
-refreshButton.addEventListener("click", function () {
+refreshButton.addEventListener("click", () => {
   location.reload();
 });
