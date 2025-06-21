@@ -57,15 +57,6 @@ button:hover {
   border: 2px solid var(--light-grn-color);
 }
 
-#refreshButton:hover {
-  color: var(--refresh-button-color);
-  border: 2px solid var(--refresh-button-color);
-}
-
-.buttons {
-  border-bottom: 1px solid var(--border-color);
-}
-
 #flexBox {
   margin-top: 10px;
   display: flex;
