@@ -84,37 +84,31 @@ const symbols = [
   "?",
   "/",
 ];
+let characterCombine = [];
 
-const selectedOption1 = document.getElementById("numbersCheck");
-const selectedOption2 = document.getElementById("symbolsCheck");
-const refreshButton = document.getElementById("refreshButton");
+const numbersCheck = document.getElementById("numbersCheck");
+const symbolsCheck = document.getElementById("symbolsCheck");
 const generateButton = document.getElementById("generateButton");
 const randomPassword1 = document.getElementById("randomPassword1");
 const randomPassword2 = document.getElementById("randomPassword2");
-const number = document.getElementById("numberInput");
+const characterValue = document.getElementById("numberInput");
 
-selectedOption1.addEventListener("change", checkboxChanged);
-selectedOption2.addEventListener("change", checkboxChanged);
+numbersCheck.addEventListener("change", checkboxChanged);
+symbolsCheck.addEventListener("change", checkboxChanged);
 
 function checkboxChanged() {
-  if (selectedOption1.checked && selectedOption2.checked) {
+  if (numbersCheck.checked && symbolsCheck.checked) {
     document.getElementById("result").textContent = ``;
-    for (let i = 0; i < numbers.length; i++) {
-      characters.push(numbers[i]);
-    }
-    for (let i = 0; i < symbols.length; i++) {
-      characters.push(symbols[i]);
-    }
-  } else if (selectedOption1.checked) {
+    characterCombine = [...characters, ...symbols, ...numbers];
+    console.log(characterCombine);
+  } else if (numbersCheck.checked) {
     document.getElementById("result").textContent = ``;
-    for (let i = 0; i < numbers.length; i++) {
-      characters.push(numbers[i]);
-    }
-  } else if (selectedOption2.checked) {
+    characterCombine = [...characters, ...numbers];
+    console.log(characterCombine);
+  } else if (symbolsCheck.checked) {
     document.getElementById("result").textContent = ``;
-    for (let i = 0; i < symbols.length; i++) {
-      characters.push(symbols[i]);
-    }
+    characterCombine = [...characters, ...symbols];
+    console.log(characterCombine);
   } else {
     document.getElementById("result").textContent = `
       Please select at least one option.
@@ -123,20 +117,20 @@ function checkboxChanged() {
 }
 
 function getRandomCharacter() {
-  let randomChar = Math.floor(Math.random() * characters.length);
-  return characters[randomChar];
+  const randomChar = Math.floor(Math.random() * characterCombine.length);
+  return characterCombine[randomChar];
 }
 
 function randomCharacters() {
   let randomPassword = "";
-  for (let i = 0; i < number.value; i++) {
+  for (let i = 0; i < characterValue.value; i++) {
     randomPassword += getRandomCharacter();
   }
   return randomPassword;
 }
 
 function numCharacters() {
-  const input = number;
+  const input = characterValue;
   const inputValue = parseInt(input.value);
 
   if (inputValue === 8) {
@@ -166,12 +160,12 @@ function numCharacters() {
   } else {
     randomPassword1.textContent = `＞﹏＜`;
     randomPassword2.textContent = `＞﹏＜`;
-    alert("Please enter a number between 8 and 15");
+    alert("Please enter a characterValue between 8 and 15");
   }
 }
 
 generateButton.addEventListener("click", () => {
-  if (selectedOption1.checked || selectedOption2.checked) {
+  if (numbersCheck.checked || symbolsCheck.checked) {
     checkboxChanged();
     numCharacters();
   }
@@ -197,8 +191,4 @@ randomPassword2.addEventListener("click", () => {
   document.execCommand("copy");
   document.body.removeChild(tempTextArea);
   alert("Text copied to clipboard: " + textCopy);
-});
-
-refreshButton.addEventListener("click", () => {
-  location.reload();
 });
