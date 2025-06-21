@@ -130,37 +130,15 @@ function randomCharacters() {
 }
 
 function numCharacters() {
-  const input = characterValue;
-  const inputValue = parseInt(input.value);
+  const inputValue = parseInt(characterValue.value);
 
-  if (inputValue === 8) {
-    randomPassword1.textContent = `${randomCharacters()}`;
-    randomPassword2.textContent = `${randomCharacters()}`;
-  } else if (inputValue === 9) {
-    randomPassword1.textContent = `${randomCharacters()}`;
-    randomPassword2.textContent = `${randomCharacters()}`;
-  } else if (inputValue === 10) {
-    randomPassword1.textContent = `${randomCharacters()}`;
-    randomPassword2.textContent = `${randomCharacters()}`;
-  } else if (inputValue === 11) {
-    randomPassword1.textContent = `${randomCharacters()}`;
-    randomPassword2.textContent = `${randomCharacters()}`;
-  } else if (inputValue === 12) {
-    randomPassword1.textContent = `${randomCharacters()}`;
-    randomPassword2.textContent = `${randomCharacters()}`;
-  } else if (inputValue === 13) {
-    randomPassword1.textContent = `${randomCharacters()}`;
-    randomPassword2.textContent = `${randomCharacters()}`;
-  } else if (inputValue === 14) {
-    randomPassword1.textContent = `${randomCharacters()}`;
-    randomPassword2.textContent = `${randomCharacters()}`;
-  } else if (inputValue === 15) {
+  if (inputValue >= 8 && inputValue <= 15) {
     randomPassword1.textContent = `${randomCharacters()}`;
     randomPassword2.textContent = `${randomCharacters()}`;
   } else {
     randomPassword1.textContent = `＞﹏＜`;
     randomPassword2.textContent = `＞﹏＜`;
-    alert("Please enter a characterValue between 8 and 15");
+    alert("Please enter a number between 8 and 15");
   }
 }
 
