@@ -87,13 +87,18 @@ const symbols = [
 
 const selectedOption1 = document.getElementById("numbersCheck");
 const selectedOption2 = document.getElementById("symbolsCheck");
+const refreshButton = document.getElementById("refreshButton");
+const generateButton = document.getElementById("generateButton");
+const randomPassword1 = document.getElementById("randomPassword1");
+const randomPassword2 = document.getElementById("randomPassword2");
+const number = document.getElementById("numberInput");
 
 selectedOption1.addEventListener("change", checkboxChanged);
 selectedOption2.addEventListener("change", checkboxChanged);
 
 function checkboxChanged() {
   if (selectedOption1.checked && selectedOption2.checked) {
-    document.getElementById("result").innerHTML = ``;
+    document.getElementById("result").textContent = ``;
     for (let i = 0; i < numbers.length; i++) {
       characters.push(numbers[i]);
     }
@@ -101,33 +106,21 @@ function checkboxChanged() {
       characters.push(symbols[i]);
     }
   } else if (selectedOption1.checked) {
-    document.getElementById("result").innerHTML = ``;
+    document.getElementById("result").textContent = ``;
     for (let i = 0; i < numbers.length; i++) {
       characters.push(numbers[i]);
     }
   } else if (selectedOption2.checked) {
-    document.getElementById("result").innerHTML = ``;
+    document.getElementById("result").textContent = ``;
     for (let i = 0; i < symbols.length; i++) {
       characters.push(symbols[i]);
     }
   } else {
-    document.getElementById("result").innerHTML = `<p>
+    document.getElementById("result").textContent = `
       Please select at least one option.
-    </p>`;
+    `;
   }
 }
-
-const button = document.getElementById("generateButton");
-const randomPassword1 = document.getElementById("randomPassword1");
-const randomPassword2 = document.getElementById("randomPassword2");
-const number = document.getElementById("numberInput");
-
-button.addEventListener("click", function () {
-  if (selectedOption1.checked || selectedOption2.checked) {
-    checkboxChanged();
-    numCharacters();
-  }
-});
 
 function getRandomCharacter() {
   let randomChar = Math.floor(Math.random() * characters.length);
@@ -177,17 +170,14 @@ function numCharacters() {
   }
 }
 
-randomPassword1.addEventListener("click", function () {
-  let textCopy = this.textContent;
-  let tempTextArea = document.createElement("textarea");
-  tempTextArea.value = textCopy;
-  document.body.appendChild(tempTextArea);
-  tempTextArea.select();
-  document.execCommand("copy");
-  document.body.removeChild(tempTextArea);
-  alert("Text copied to clipboard: " + textCopy);
+generateButton.addEventListener("click", () => {
+  if (selectedOption1.checked || selectedOption2.checked) {
+    checkboxChanged();
+    numCharacters();
+  }
 });
-randomPassword2.addEventListener("click", function () {
+
+randomPassword1.addEventListener("click", () => {
   let textCopy = this.textContent;
   let tempTextArea = document.createElement("textarea");
   tempTextArea.value = textCopy;
@@ -198,7 +188,16 @@ randomPassword2.addEventListener("click", function () {
   alert("Text copied to clipboard: " + textCopy);
 });
 
-const refreshButton = document.getElementById("refreshButton");
+randomPassword2.addEventListener("click", () => {
+  let textCopy = this.textContent;
+  let tempTextArea = document.createElement("textarea");
+  tempTextArea.value = textCopy;
+  document.body.appendChild(tempTextArea);
+  tempTextArea.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempTextArea);
+  alert("Text copied to clipboard: " + textCopy);
+});
 
 refreshButton.addEventListener("click", () => {
   location.reload();
