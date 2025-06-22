@@ -232,3 +232,62 @@ randomPassword2.addEventListener("click", async function () {
     document.body.removeChild(tempTextArea);
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const themeSwitch = document.getElementById("theme");
+  const status = document.getElementById("status");
+  const currentTheme = localStorage.getItem("theme");
+  const whiteHeading = document.getElementById("whiteText");
+  const button = document.getElementById("generateButton");
+
+  if (currentTheme) {
+    themeSwitch.checked = currentTheme === "dark";
+    statusUpdate();
+  }
+
+  themeSwitch.addEventListener("change", () => {
+    statusUpdate();
+    if (themeSwitch.checked) {
+      localStorage.setItem("theme", "dark");
+      document.body.style.backgroundColor = "#273549";
+      document.body.style.color = "#ecfdf5";
+      whiteHeading.style.color = "#ecfdf5";
+      // button.style.color = "#273549";
+      randomPassword1.style.backgroundColor = "#ecfdf5";
+      randomPassword2.style.backgroundColor = "#ecfdf5";
+      randomPassword1.style.color = "#273549";
+      randomPassword2.style.color = "#273549";
+      characterValue.style.backgroundColor = "#ecfdf5";
+      characterValue.style.color = "#273549";
+    } else {
+      localStorage.setItem("theme", "light");
+      document.body.style.backgroundColor = "#ecfdf5";
+      document.body.style.color = "#273549";
+      whiteHeading.style.color = "#273549";
+      // button.style.color = "#ecfdf5";
+      randomPassword1.style.backgroundColor = "#273549";
+      randomPassword2.style.backgroundColor = "#273549";
+      randomPassword1.style.color = "#10b981";
+      randomPassword2.style.color = "#10b981";
+      characterValue.style.backgroundColor = "#273549";
+      characterValue.style.color = "#10b981";
+    }
+  });
+
+  if (currentTheme === "dark") {
+    whiteHeading.style.color = "#ecfdf5";
+    document.body.style.backgroundColor = "#273549";
+    document.body.style.color = "#ecfdf5";
+    // button.style.color = "#273549";
+    randomPassword1.style.backgroundColor = "#ecfdf5";
+    randomPassword2.style.backgroundColor = "#ecfdf5";
+    randomPassword1.style.color = "#273549";
+    randomPassword2.style.color = "#273549";
+    characterValue.style.backgroundColor = "#ecfdf5";
+    characterValue.style.color = "#273549";
+  }
+
+  function statusUpdate() {
+    status.textContent = themeSwitch.checked ? "Dark" : "Light";
+  }
+});
