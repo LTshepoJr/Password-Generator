@@ -1,4 +1,4 @@
-# 🔐 Password Generator
+# 🔐 [**Password Generator**](https://pwsgenerator.netlify.app/)
 
 A simple, interactive, and secure **Password Generator** web app that allows users to instantly create strong and random passwords. The name speaks for itself — it ensures that you’ll never have to use a weak or predictable password again.
 
